@@ -5,6 +5,10 @@ const proxyMap = {
     "youtube.com": proxy,
     "github.com": proxy,
     "docker.com": proxy,
+    "x.com": proxy,
+    "facebook.com": proxy,
+
+    "gdstudio.xyz": proxy,
 };
 
 function getBaseDomain(host) {

@@ -1,0 +1,24 @@
+const proxy = "PROXY 127.0.0.1:14622;PROXY 192.168.2.4:7891"
+
+const proxyMap = {
+    "google.com": proxy,
+    "youtube.com": proxy,
+    "github.com": proxy,
+    "docker.com": proxy,
+};
+
+function getBaseDomain(host) {
+    var parts = host.split('.');
+    if (parts.length <= 2) return host;
+    return parts.slice(-2).join('.');
+}
+
+function FindProxyForURL(url, host) {
+    var base = getBaseDomain(host);
+
+    if (proxyMap.hasOwnProperty(base)) {
+        return proxyMap[base];
+    }
+
+    return "DIRECT";
+}

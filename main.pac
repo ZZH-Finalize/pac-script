@@ -1,16 +1,22 @@
-const proxy = "SOCKS 127.0.0.1:14622;SOCKS 192.168.2.4:7892"
+const proxy = "PROXY 127.0.0.1:14622; PROXY 192.168.2.4:7892"
 
 const proxyMap = {
     "google.com": proxy,
+
     "youtube.com": proxy,
+    "googlevideo.com": proxy,
+    "ytimg.com": proxy,
+
     "github.com": proxy,
     "githubusercontent.com": proxy,
+
     "docker.com": proxy,
     "x.com": proxy,
     "facebook.com": proxy,
 
     "gdstudio.xyz": proxy,
     "asuswrt-merlin.net": proxy,
+    "loli.net": proxy,
 };
 
 function getBaseDomain(host) {

@@ -14,9 +14,11 @@ const proxyMap = {
     "x.com": proxy,
     "facebook.com": proxy,
 
-    "gdstudio.xyz": proxy,
     "asuswrt-merlin.net": proxy,
     "immortalwrt.org": proxy,
+
+    "gdstudio.xyz": proxy,
+    "huggingface.co": proxy,
 
     "loli.net": proxy,
 };

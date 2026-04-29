@@ -10,7 +10,7 @@ const proxyMap = {
     "facebook.com": proxy,
 
     "gdstudio.xyz": proxy,
-    "asuswrt-merlin.ne": proxy,
+    "asuswrt-merlin.net": proxy,
 };
 
 function getBaseDomain(host) {

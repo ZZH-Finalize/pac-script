@@ -16,6 +16,8 @@ const proxyMap = {
 
     "gdstudio.xyz": proxy,
     "asuswrt-merlin.net": proxy,
+    "immortalwrt.org": proxy,
+
     "loli.net": proxy,
 };
 

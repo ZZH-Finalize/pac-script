@@ -4,6 +4,7 @@ const proxyMap = {
     "google.com": proxy,
     "youtube.com": proxy,
     "github.com": proxy,
+    "githubusercontent.com": proxy,
     "docker.com": proxy,
     "x.com": proxy,
     "facebook.com": proxy,

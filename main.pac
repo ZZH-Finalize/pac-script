@@ -1,5 +1,5 @@
 // Proxy server (same for all matched rules)
-const proxy = "PROXY 127.0.0.1:14622; PROXY 192.168.2.4:7892";
+const proxy = "PROXY 127.0.0.1:14622; PROXY 192.168.2.4:7891";
 
 // ========== 1. Exact domain matching (hash table, O(1)) ==========
 const DOMAIN = {

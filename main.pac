@@ -71,6 +71,7 @@ const DOMAIN = {
     "dfp6rglgjqszk.cloudfront.net": proxy,
     "youtubei.googleapis.com": proxy,
     "yt3.ggpht.com": proxy,
+    "surrit.com": proxy,
     "music.youtube.com": proxy,
     "d1q6f0aelx0por.cloudfront.net": proxy,
     "d2wy8f7a9ursnm.cloudfront.net": proxy,
@@ -713,6 +714,7 @@ const DOMAIN_KEYWORD = [
     "onedrive",
     "skydrive",
     "porn",
+    "missav",
     "ttvnw",
 ];
 

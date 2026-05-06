@@ -86,6 +86,7 @@ const DOMAIN = {
 
 // ========== 2. Suffix matching (500+ entries -> single regex) ==========
 const DOMAIN_SUFFIX = [
+    "gdstudio.xyz",
     "tdesktop.com",
     "telegra.ph",
     "telegram.me",

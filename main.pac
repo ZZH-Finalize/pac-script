@@ -86,8 +86,18 @@ const DOMAIN = {
     "steampipe.akamaized.net": proxy,
 };
 
-// ========== 2. Suffix matching (500+ entries -> single regex) ==========
-const DOMAIN_SUFFIX = [
+// ========== 2. Direct suffix matching ==========
+const DOMAIN_SUFFIX_DIRECT = [
+    "finalize.top",
+    ".cn",
+]
+
+// ========== 3. Direct keyword matching ==========
+const DOMAIN_KEYWORD_DIRECT = [
+]
+
+// ========== 4. Suffix matching (500+ entries -> single regex) ==========
+const DOMAIN_SUFFIX_PROXY = [
     "gdstudio.xyz",
     "tdesktop.com",
     "telegra.ph",
@@ -666,8 +676,8 @@ const DOMAIN_SUFFIX = [
     "huggingface.co",
 ];
 
-// ========== 3. Keyword matching (50+ entries -> single regex) ==========
-const DOMAIN_KEYWORD = [
+// ========== 5. Keyword matching (50+ entries -> single regex) ==========
+const DOMAIN_KEYWORD_PROXY = [
     "claude",
     "openai",
     "abematv.akamaized.net",
@@ -729,11 +739,25 @@ const DOMAIN_KEYWORD = [
 const escapeRegex = str => str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
 // Build a regex that matches exact suffix or ".suffix" at the end of hostname
-const suffixPattern = DOMAIN_SUFFIX.map(escapeRegex).join('|');
-const SUFFIX_REGEX = new RegExp(`(?:^|\\.)(?:${suffixPattern})$`, 'i');
+// direct regex
+const suffixPatternDirect = DOMAIN_SUFFIX_DIRECT.map(escapeRegex).join('|');
+// const keywordPatternDirect = DOMAIN_KEYWORD_DIRECT.map(escapeRegex).join('|');
+const directRegexParts = [
+    `(?:^|\\.)(?:${suffixPatternDirect})$`,
+    // keywordPatternDirect
+];
 
-const keywordPattern = DOMAIN_KEYWORD.map(escapeRegex).join('|');
-const KEYWORD_REGEX = new RegExp(keywordPattern, 'i');
+const DIRECT_REGEX = new RegExp(directRegexParts.join('|'), 'i');
+
+// proxy regex
+const suffixPatternProxy = DOMAIN_SUFFIX_PROXY.map(escapeRegex).join('|');
+const keywordPatternProxy = DOMAIN_KEYWORD_PROXY.map(escapeRegex).join('|');
+const proxyRegexParts = [
+    `(?:^|\\.)(?:${suffixPatternProxy})$`,
+    keywordPatternProxy
+];
+
+const PROXY_REGEX = new RegExp(proxyRegexParts.join('|'), 'i');
 
 // ========== Main PAC function ==========
 function FindProxyForURL(url, host) {
@@ -742,13 +766,13 @@ function FindProxyForURL(url, host) {
         return DOMAIN[host];
     }
 
-    // 2. Suffix match (single regex test)
-    if (SUFFIX_REGEX.test(host)) {
-        return proxy;
+    // 2. Direct match (single regex test)
+    if (DIRECT_REGEX.test(host)) {
+        return direct;
     }
 
-    // 3. Keyword match (single regex test)
-    if (KEYWORD_REGEX.test(host)) {
+    // 3. Pproxy match (single regex test)
+    if (PROXY_REGEX.test(host)) {
         return proxy;
     }
 

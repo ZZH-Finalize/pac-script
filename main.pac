@@ -387,6 +387,7 @@ const DOMAIN_SUFFIX_PROXY = [
     "sg",
     "tw",
     "uk",
+    "us",
     "4sqi.net",
     "a248.e.akamai.net",
     "adobedtm.com",

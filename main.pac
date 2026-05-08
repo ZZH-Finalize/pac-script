@@ -5,6 +5,9 @@ const direct = "DIRECT";
 // ========== 1. Exact domain matching (hash table, O(1)) ==========
 const DOMAIN = {
     "cn.bing.com": direct,
+    "sukebei.nyaa.si": proxy,
+    "www.tokyotosho.info": proxy,
+    "www.torrentdownloads.pro": proxy,
     "aistudio.google.com": proxy,
     "api.githubcopilot.com": proxy,
     "api.groq.com": proxy,

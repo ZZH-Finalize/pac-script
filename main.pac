@@ -5,7 +5,6 @@ const direct = "DIRECT";
 // ========== 1. Exact domain matching (hash table, O(1)) ==========
 const DOMAIN = {
     "cn.bing.com": direct,
-    "sukebei.nyaa.si": proxy,
     "www.tokyotosho.info": proxy,
     "www.torrentdownloads.pro": proxy,
     "aistudio.google.com": proxy,
@@ -101,6 +100,8 @@ const DOMAIN_KEYWORD_DIRECT = [
 
 // ========== 4. Suffix matching (500+ entries -> single regex) ==========
 const DOMAIN_SUFFIX_PROXY = [
+    "nyaa.si",
+    "onejav.com",
     "gdstudio.xyz",
     "tdesktop.com",
     "telegra.ph",

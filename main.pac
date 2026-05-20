@@ -8,6 +8,7 @@ const DOMAIN = {
     "damag.net": proxy,
     "www.tokyotosho.info": proxy,
     "www.torrentdownloads.pro": proxy,
+    "www.asmrgay.com": proxy,
     "aistudio.google.com": proxy,
     "api.githubcopilot.com": proxy,
     "api.groq.com": proxy,

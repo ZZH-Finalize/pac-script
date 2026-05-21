@@ -6,7 +6,6 @@ const direct = "DIRECT";
 const DOMAIN = {
     "cn.bing.com": direct,
     "damag.net": proxy,
-    "e-hentai.org": proxy,
     "www.tokyotosho.info": proxy,
     "www.torrentdownloads.pro": proxy,
     "www.asmrgay.com": proxy,
@@ -104,6 +103,7 @@ const DOMAIN_KEYWORD_DIRECT = [
 // ========== 4. Suffix matching (500+ entries -> single regex) ==========
 const DOMAIN_SUFFIX_PROXY = [
     "nyaa.si",
+    "e-hentai.org",
     "onejav.com",
     "gdstudio.xyz",
     "z-lib.fm",

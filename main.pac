@@ -108,6 +108,7 @@ const DOMAIN_SUFFIX_PROXY = [
     "onejav.com",
     "gdstudio.xyz",
     "z-lib.fm",
+    "chromaso.net",
     "thetvdb.com",
     "tdesktop.com",
     "telegra.ph",

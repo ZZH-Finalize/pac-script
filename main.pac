@@ -7,6 +7,7 @@ const DOMAIN = {
     "cn.bing.com": direct,
     "damag.net": proxy,
     "last.fm": proxy,
+    "greasyfork.org": proxy,
     "www.tokyotosho.info": proxy,
     "www.torrentdownloads.pro": proxy,
     "www.asmrgay.com": proxy,

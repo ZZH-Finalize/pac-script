@@ -116,6 +116,7 @@ const DOMAIN_SUFFIX_PROXY = [
     "telegra.ph",
     "telegram.me",
     "telegram.org",
+    "pixnet.net",
     "telesco.pe",
     "edgedatg.com",
     "go.com",

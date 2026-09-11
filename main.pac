@@ -6,6 +6,7 @@ const direct = "DIRECT";
 const DOMAIN = {
     "cn.bing.com": direct,
     "damag.net": proxy,
+    "mikanani.me": proxy,
     "last.fm": proxy,
     "www.tokyotosho.info": proxy,
     "www.torrentdownloads.pro": proxy,

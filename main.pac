@@ -8,6 +8,7 @@ const DOMAIN = {
     "damag.net": proxy,
     "mikanani.me": proxy,
     "last.fm": proxy,
+    "www.last.fm": proxy,
     "www.tokyotosho.info": proxy,
     "www.torrentdownloads.pro": proxy,
     "www.asmrgay.com": proxy,

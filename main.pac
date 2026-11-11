@@ -105,6 +105,7 @@ const DOMAIN_KEYWORD_DIRECT = [
 
 // ========== 4. Suffix matching (500+ entries -> single regex) ==========
 const DOMAIN_SUFFIX_PROXY = [
+    "workers.dev"
     "nyaa.si",
     "trashbytes.to",
     "e-hentai.org",
